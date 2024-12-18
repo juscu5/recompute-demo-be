@@ -1,0 +1,886 @@
+const DataTypes = require("sequelize");
+module.exports = function (sequelize) {
+  const salesfile1 = sequelize.define(
+    "salesfile1",
+    {
+      recid: {
+        autoIncrement: true,
+        type: DataTypes.BIGINT,
+        allowNull: false,
+        primaryKey: true,
+        comment: "MODIFIED BY LstvPoco ON 22.08.01 17:31",
+      },
+      cancelrem: {
+        type: DataTypes.STRING(200),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:01",
+      },
+      prttyp: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:01",
+      },
+      warcde: {
+        type: DataTypes.STRING(10),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:01",
+      },
+      colschdnum: {
+        type: DataTypes.STRING(25),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:01",
+      },
+      totscpwdamt: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:01",
+      },
+      totscpwdamtfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:01",
+      },
+      docnum: {
+        type: DataTypes.STRING(25),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:01",
+        unique: "docnum",
+      },
+      cusdsc: {
+        type: DataTypes.STRING(100),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:01",
+      },
+      trmdsc: {
+        type: DataTypes.STRING(30),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:01",
+      },
+      smndsc: {
+        type: DataTypes.STRING(30),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:01",
+      },
+      shipto: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:01",
+      },
+      trncde: {
+        type: DataTypes.STRING(3),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      trntot: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      smncde: {
+        type: DataTypes.STRING(30),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      trmcde: {
+        type: DataTypes.STRING(20),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      cuscde: {
+        type: DataTypes.STRING(100),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      cusgrp: {
+        type: DataTypes.STRING(10),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      curcde: {
+        type: DataTypes.STRING(5),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      comcde: {
+        type: DataTypes.STRING(10),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      usrnam: {
+        type: DataTypes.STRING(20),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      currte: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      prccde: {
+        type: DataTypes.STRING(30),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      sonum: {
+        type: DataTypes.STRING(15),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      shipto2: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      vatamt: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      vatrte: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      othchatot: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      textprc: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      logtim: {
+        type: DataTypes.DATE,
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      trmtypcde: {
+        type: DataTypes.STRING(15),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      trmtypdsc: {
+        type: DataTypes.STRING(30),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      othchatotfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      trntotfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      textprcfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      vat: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      ewtrte: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      taxcde: {
+        type: DataTypes.STRING(15),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      docapp: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      docbal: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      setdocbal: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      totpdc: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      settotpdc: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      amtapp: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:02",
+      },
+      memtypcde: {
+        type: DataTypes.STRING(30),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      manualgl: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      ewtamt: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      pretaxamt: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      pretaxrte: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      netvatamt: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      ewtcde: {
+        type: DataTypes.STRING(15),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      docbalfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      vatableamt: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      vatexemptamt: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      vatzeroratedamt: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      nonvat: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      chknonvat: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      gainloss: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      manualvat: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      setdocbalfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      settotpdcfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      busstyle: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      tinnum: {
+        type: DataTypes.STRING(30),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      canceldoc: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      vatamtfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      netvatamtfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      vatableamtfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      vatexemptamtfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      vatzeroratedamtfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      nonvatfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      orderby: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      projname: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      projsite: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      ra: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      sibill: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      billtype: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:03",
+      },
+      siremarks: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      salesengr: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      preby: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      chkby: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      apvby: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      delconfnum: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      ffrom: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      chkasy: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      chkewt: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      totamtdis: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      totgroext: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      totamtdisfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      totgroextfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      netamt: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      netamtfor: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      ponum: {
+        type: DataTypes.STRING(20),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      increp: {
+        type: DataTypes.STRING(1),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      pcknum: {
+        type: DataTypes.STRING(15),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      cusgrpcde: {
+        type: DataTypes.STRING(30),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      cusadd1: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      cusadd2: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      field01: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      field02: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      field03: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      field04: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      field05: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      field06: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      field07: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      field08: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      field09: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:04",
+      },
+      field10: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      field11: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      field12: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      field13: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      field14: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      field15: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      field16: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      field17: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      field18: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      field19: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      field20: {
+        type: DataTypes.STRING(150),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      manualewt: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      bilnum: {
+        type: DataTypes.STRING(15),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      doclock: {
+        type: DataTypes.STRING(1),
+        allowNull: true,
+        defaultValue: "N",
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      bnkcde: {
+        type: DataTypes.STRING(30),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      chknum: {
+        type: DataTypes.STRING(15),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      voudocnum: {
+        type: DataTypes.STRING(25),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      trndte: {
+        type: DataTypes.DATEONLY,
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      duedate: {
+        type: DataTypes.DATEONLY,
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      logdte: {
+        type: DataTypes.DATEONLY,
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      lastpaydte: {
+        type: DataTypes.DATEONLY,
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      canceldte: {
+        type: DataTypes.DATEONLY,
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      radte: {
+        type: DataTypes.DATEONLY,
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      aprdte: {
+        type: DataTypes.DATEONLY,
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      drdte: {
+        type: DataTypes.DATEONLY,
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      chkevat: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      evatcde: {
+        type: DataTypes.STRING(15),
+        allowNull: true,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      evatrte: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      evatamt: {
+        type: DataTypes.DECIMAL(18, 5),
+        allowNull: true,
+        defaultValue: 0.0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      manualevat: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+        comment: "ADDED BY LstvPoco ON 16.09.30 20:05",
+      },
+      advdoc: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+      },
+      gldepcde: {
+        type: DataTypes.STRING(30),
+        allowNull: true,
+        comment: "MODIFIED BY LstvPoco ON 17.12.12 11:15",
+      },
+      refnum: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+        comment: "MODIFIED BY LstvPoco ON 19.04.01 10:26",
+      },
+      remarks: {
+        type: DataTypes.STRING(250),
+        allowNull: true,
+        comment: "MODIFIED BY LstvPoco ON 19.05.21 16:03",
+      },
+      remarks1: {
+        type: DataTypes.STRING(250),
+        allowNull: true,
+        comment: "MODIFIED BY LstvPoco ON 19.05.21 16:03",
+      },
+      pcklstselect: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+      },
+      deldte: {
+        type: DataTypes.DATEONLY,
+        allowNull: true,
+      },
+      drivercde: {
+        type: DataTypes.STRING(100),
+        allowNull: true,
+      },
+      platenumber: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+      },
+      timedepart: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+      },
+      status: {
+        type: DataTypes.STRING(15),
+        allowNull: true,
+      },
+    },
+    {
+      sequelize,
+      tableName: "salesfile1",
+      timestamps: false,
+      indexes: [
+        {
+          name: "PRIMARY",
+          unique: true,
+          using: "BTREE",
+          fields: [{ name: "recid" }],
+        },
+        {
+          name: "docnum",
+          unique: true,
+          using: "BTREE",
+          fields: [{ name: "docnum" }],
+        },
+        {
+          name: "trntot",
+          using: "BTREE",
+          fields: [{ name: "trntot" }],
+        },
+        {
+          name: "cuscde",
+          using: "BTREE",
+          fields: [{ name: "cuscde" }],
+        },
+        {
+          name: "cusdsc",
+          using: "BTREE",
+          fields: [{ name: "cusdsc" }],
+        },
+        {
+          name: "lastpaydte",
+          using: "BTREE",
+          fields: [{ name: "lastpaydte" }],
+        },
+        {
+          name: "settotpdc",
+          using: "BTREE",
+          fields: [{ name: "settotpdc" }],
+        },
+        {
+          name: "trmcde",
+          using: "BTREE",
+          fields: [{ name: "trmcde" }],
+        },
+        {
+          name: "setdocbalfor",
+          using: "BTREE",
+          fields: [{ name: "setdocbalfor" }],
+        },
+        {
+          name: "setdocbal",
+          using: "BTREE",
+          fields: [{ name: "setdocbal" }],
+        },
+        {
+          name: "trncde",
+          using: "BTREE",
+          fields: [{ name: "trncde" }],
+        },
+        {
+          name: "trndte",
+          using: "BTREE",
+          fields: [{ name: "trndte" }],
+        },
+        {
+          name: "drdte",
+          using: "BTREE",
+          fields: [{ name: "drdte" }],
+        },
+        {
+          name: "refnum",
+          using: "BTREE",
+          fields: [{ name: "refnum" }],
+        },
+        {
+          name: "rep_idx",
+          using: "BTREE",
+          fields: [{ name: "cusgrp" }, { name: "trndte" }],
+        },
+      ],
+    }
+  );
+  salesfile1.associate = (models) => {
+    salesfile1.hasMany(models.salesfile2, {
+      foreignKey: "docnum",
+      sourceKey: "docnum",
+    });
+  };
+  return salesfile1;
+};
